@@ -24,6 +24,18 @@ $router->post('/login', 'UserController@login');
 
 // $router->get('/webScraping', 'webScrapingController@index');
 
-$router->get('/key', function() {
+$router->get('/key', function () {
     return \Illuminate\Support\Str::random(32);
 });
+
+$router->get('api/barang/get', 'BarangController@get');
+$router->post('api/barang/post', 'BarangController@post');
+
+$router->get('api/kendaraan/get', 'KendaraanController@get');
+$router->post('api/kendaraan/post', 'KendaraanController@post');
+
+$router->get('api/perhiasan/get', 'PerhiasanController@get');
+$router->post('api/perhiasan/post', 'PerhiasanController@post');
+
+$router->get('api/rumah/get', 'RumahController@get');
+$router->post('api/rumah/post', 'RumahController@post');
