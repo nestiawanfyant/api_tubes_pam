@@ -32,6 +32,8 @@ class CreateTblPenitipanKendaraan extends Migration
             $table->string('nomotPlatKendaraan');
             $table->date('batasPenitipan');
             $table->string('catatan');
+            $table->enum('status', ['prose', 'diTolak', 'diTerima'])->default('proses');
+            $table->boolean('confirmed')->default(false);
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('user_id')->references('id')->on('tbl_users')->onDelete('cascade');

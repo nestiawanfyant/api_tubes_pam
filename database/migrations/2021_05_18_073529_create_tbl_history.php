@@ -20,6 +20,7 @@ class CreateTblHistory extends Migration
             $table->unsignedBigInteger('PenitipanPerhiasan_id')->default(null);
             $table->unsignedBigInteger('PenitipanBarang_id')->default(null);
             $table->unsignedBigInteger('PenitipanRumah_id')->default(null);
+            $table->boolean('done')->default(false);
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('user_id')->references('id')->on('tbl_users')->onDelete('cascade');
