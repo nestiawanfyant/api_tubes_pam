@@ -24,13 +24,6 @@ class UserController extends Controller
         $noTelp     = $input->input('noTelp');
         $pass       = Hash::make($input->input('password'));
 
-        // $register = User::create([
-        //     'name'      => $name,
-        //     'email'     => $email,
-        //     'password'  => $pass,
-        //     'noTelfon'  => $noTelp,
-        // ]);
-
         $register               = New User;
         $register->name         = $name;
         $register->email        = $email;
