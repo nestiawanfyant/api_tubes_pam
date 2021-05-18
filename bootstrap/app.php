@@ -114,4 +114,8 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+if ($app->environment() !== 'production') {    
+    $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class); 
+}
+
 return $app;
